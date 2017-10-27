@@ -1,0 +1,10 @@
+<?php
+
+$slackHostName = '';
+$slackAutoJoinChannels = '';
+$slackAuthToken = '';
+
+$contactName = '';
+$contactEmail = '';
+
+?>
