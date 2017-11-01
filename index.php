@@ -23,7 +23,7 @@ include('config.php');
 			<form action="register.php" method="POST">
 			<input class="email" type="text" placeholder="Email" name="email"><input class="button" type="submit" name="submit" value="Únete">
 			</form>
-			<div class="info-bottom">¿Necesitas ayuda? Contacto <a href="mailto:<?php echo $GLOBALS['contactEmail']; ?>"><?php echo $GLOBALS['contactName']; ?></a>.
+			<div class="info-bottom">¿Necesitas ayuda? Contacta a <a href="mailto:<?php echo $GLOBALS['contactEmail']; ?>"><?php echo $GLOBALS['contactName']; ?></a>.
 				</div>
 			</div>
 		</div>
