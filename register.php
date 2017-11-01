@@ -6,13 +6,13 @@
         $success = register($email, $message);
 
         if($success) {
-                $title = "Invitation sent.";
+                $title = "Invitación enviada.";
                 html_main($title, $message, '');
                 exit();
         }
         else {
-                $title = "Error sending invitation.";
-                $extraHTML = "<div class='try-again'><a href='./'>Try again.</a></div>";
+                $title = "Error al enviar la invitación";
+                $extraHTML = "<div class='try-again'><a href='./'>Inténtalo de nuevo.</a></div>";
                 html_main($title, $message, $extraHTML);
                 exit();
         }
@@ -24,7 +24,7 @@
 
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL))
                 {
-                        $message = "That doesn't look like a valid email address.";
+                        $message = "Eso no se parece a una dirección de correo electrónico válida.";
                         return false;
                 }
 
@@ -67,22 +67,22 @@
                 if($reply['ok']==false) {
                         switch ($reply['error']) {
                         case 'bad_address':
-                                $message = "That doesn't look like a valid email address.";
+                                $message = "Eso no se parece a una dirección de correo electrónico válida.";
                                 return false;
                         case 'sent_recently':
                         case 'already_invited':
-                                $message = "An invitation has already been sent to that address.";
+                                $message = "Ya se envió una invitación a esa dirección.";
                                 return false;
                         case 'already_in_team':
-                                $message = "That address is already registered.";
+                                $message = "Esa dirección ya está registrada.";
                                 return false;
                         default:
-                                $message = "An unknown error occured.  Please contact <a href='".$GLOBALS['contactEmail']."' target=\"_blank\">".$GLOBALS['contactName']."</a> and include this error message: \"<em>" . $reply['error'] . "</em>\".";
+                                $message = "Un error desconocido ocurrió. Por favor contactar <a href='".$GLOBALS['contactEmail']."' target=\"_blank\">".$GLOBALS['contactName']."</a> e incluye este mensaje de error: \"<em>" . $reply['error'] . "</em>\".";
                                 return false;
                         }
                 }
                 else {
-                        $message = "An invitation link has been sent to <em>" . $email ."</em>";
+                        $message = "Se envió un enlace de invitación a <em>" . $email ."</em>";
                         return true;
                 }
         }
@@ -103,7 +103,7 @@
                                 <div class="main">
                                 <div class="info"><?php echo $message; ?></div>
                                 <?php echo $extraHTML; ?>
-                                <div class="info-bottom">Need help? Contact <a href="mailto:<?php echo $GLOBALS['contactEmail'];?>"><?php echo $GLOBALS['contactName']?></a>.
+                                <div class="info-bottom">¿Necesitas ayuda? Contacta a <a href="mailto:<?php echo $GLOBALS['contactEmail'];?>"><?php echo $GLOBALS['contactName']?></a>.
                                         </div>
                                 </div>
                         </div>
