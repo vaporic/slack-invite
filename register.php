@@ -95,6 +95,7 @@
         <html xmlns="http://www.w3.org/1999/xhtml">
         <head>
                 <title><?php echo $title; ?></title>
+                <meta charset="UTF-8">
                 <link href='http://fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
                 <link href="styles.css" rel="stylesheet" type="text/css" />     
         <body>
