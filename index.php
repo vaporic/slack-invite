@@ -15,9 +15,9 @@ include('config.php');
 		<div class="bg-inner">
 			<div class="main"><img class="logo" src="logo.png"/>
 			<div class="info">
-				<h2>Únete a yeira e-learning en Slack</h2>
+				<h2>Únete a yeira en slack</h2>
 				<h4>
-					¡Unete y empieza a colaborar!
+					hablemos de e-learning
 				</h4>
 			</div>
 			<form action="register.php" method="POST">
