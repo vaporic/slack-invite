@@ -17,7 +17,7 @@ include('config.php');
 			<div class="info">
 				<h2>Únete a yeira en slack</h2>
 				<h4>
-					hablemos de e-learning
+					Hablemos de e-learning
 				</h4>
 			</div>
 			<form action="register.php" method="POST">
